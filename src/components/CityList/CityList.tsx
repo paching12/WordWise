@@ -2,7 +2,7 @@ import { type FC } from "react";
 import styles from "./CityList.module.css";
 import type { CityListProps } from "./CityList.types";
 import { Spinner } from "../Spinner";
-import { CityItem } from "../City";
+import { CityItem } from "../CityItem";
 import { Message } from "../Message";
 
 const CityList: FC<CityListProps> = ({ cities, isLoading }) => {

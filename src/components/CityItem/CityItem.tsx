@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import styles from "./City.module.css";
-import type { CityProps } from "./City.types";
+import type { CityProps } from "./CityItem.types";
 
 const formatDate = (date: string) =>
   new Intl.DateTimeFormat("en", {
@@ -10,7 +10,7 @@ const formatDate = (date: string) =>
     // weekday: "long",
   }).format(new Date(date));
 
-const City: FC<CityProps> = ({ city }) => {
+const CityItem: FC<CityProps> = ({ city }) => {
   const { cityName, emoji, date } = city;
 
   return (
@@ -60,4 +60,4 @@ const City: FC<CityProps> = ({ city }) => {
   // );
 };
 
-export default City;
+export default CityItem;
