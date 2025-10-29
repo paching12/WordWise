@@ -1,5 +1,4 @@
 import type { FC } from "react";
-import { ButtonBack } from "../Button";
 import styles from "./City.module.css";
 import type { CityProps } from "./City.types";
 
@@ -12,15 +11,7 @@ const formatDate = (date: string) =>
   }).format(new Date(date));
 
 const City: FC<CityProps> = ({ city }) => {
-  // TEMP DATA
-  // const currentCity = {
-  //   cityName: "Lisbon",
-  //   emoji: "🇵🇹",
-  //   date: "2027-10-31T15:59:59.138Z",
-  //   notes: "My favorite city so far!",
-  // };
-
-  const { cityName, emoji, date, notes } = city;
+  const { cityName, emoji, date } = city;
 
   return (
     <li className={styles.cityItem}>
