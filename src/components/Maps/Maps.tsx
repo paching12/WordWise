@@ -1,7 +1,15 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import styles from "./Maps.module.css";
-import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
+import {
+  MapContainer,
+  Marker,
+  Popup,
+  TileLayer,
+  useMap,
+  useMapEvents,
+} from "react-leaflet";
 import { useCities } from "../../contexts/CitiesContext";
 
 const Maps = () => {
@@ -61,6 +69,7 @@ const Maps = () => {
           </Marker>
         ))}
         <ChangeCenter position={mapPosition} />
+        <DetectClick />
       </MapContainer>
     </div>
   );
@@ -72,4 +81,20 @@ function ChangeCenter({ position }: { position: [number, number] }) {
   return null;
 }
 
+function DetectClick() {
+  const navigate = useNavigate();
+  useMapEvents({
+    click: (e: {
+      latlng: {
+        lat: number;
+        lng: number;
+      };
+    }) => {
+      console.log(e);
+
+      navigate(`form?lat=${e?.latlng.lat}&lng=${e.latlng.lng}`);
+    },
+  });
+  return null;
+}
 export default Maps;
