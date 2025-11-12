@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from "./Maps.module.css";
 import {
   MapContainer,
@@ -17,7 +17,6 @@ import { useUrlPosition } from "../../hooks/useUrlPosition";
 
 const Maps = () => {
   const [mapPosition, setMapPosition] = useState<[number, number]>([40, 0]);
-  // const [searchParams] = useSearchParams();
   const [lat, lng] = useUrlPosition();
 
   const {
