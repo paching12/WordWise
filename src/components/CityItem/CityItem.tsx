@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import type { FC, MouseEvent } from "react";
 import styles from "./CityItem.module.css";
 import type { CityProps } from "./CityItem.types";
 import { Link } from "react-router-dom";
@@ -14,7 +14,12 @@ const formatDate = (date: string) =>
 
 const CityItem: FC<CityProps> = ({ city }) => {
   const { cityName, emoji, date, id, position } = city;
-  const { currentCity } = useCities();
+  const { currentCity, deleteCity } = useCities();
+
+  const onDeleteClickHandler = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    deleteCity(id);
+  };
 
   return (
     <li>
@@ -27,7 +32,9 @@ const CityItem: FC<CityProps> = ({ city }) => {
         <span className={styles.emoji}>{emoji}</span>
         <h3 className={styles.name}>{cityName}</h3>
         <time className={styles.date}>{formatDate(date)}</time>
-        <button className={styles.deleteBtn}>&times;</button>
+        <button className={styles.deleteBtn} onClick={onDeleteClickHandler}>
+          &times;
+        </button>
       </Link>
     </li>
   );
