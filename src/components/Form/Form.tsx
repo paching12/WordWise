@@ -120,21 +120,21 @@ function Form() {
       </div>
 
       <div className={styles.row}>
-        <label htmlFor="date">When didd you go toa {cityName}?</label>
-        <input
+        <label htmlFor="date">When didd you go to {cityName}?</label>
+        {/* <input
           id="date"
           type="date"
           onChange={(e) =>
             setDate(e.target.value ? new Date(e.target.value) : null)
           }
           value={date ? date.toISOString().substring(0, 10) : ""}
-        />
-        {/* <DatePicker
+        /> */}
+        <DatePicker
           id="date"
           selected={date}
           onChange={(selectedDate) => setDate(selectedDate)}
           dateFormat="dd/MM/yyyy"
-        /> */}
+        />
       </div>
 
       <div className={styles.row}>
