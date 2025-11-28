@@ -7,7 +7,7 @@ import {
 } from "react";
 import type {
   CitiesContextProvider,
-  contextTypeValue,
+  ContextTypeValue,
 } from "./CitiesContext.types";
 import { ActionPayloadTypes } from "../../actions/cities";
 import {
@@ -18,7 +18,7 @@ import type { City } from "../../shared/types/City";
 
 const URL = "http://localhost:8001";
 
-const CitiesContext = createContext<contextTypeValue>({
+const CitiesContext = createContext<ContextTypeValue>({
   createCity: () => {},
   deleteCity: () => {},
   isLoading: false,

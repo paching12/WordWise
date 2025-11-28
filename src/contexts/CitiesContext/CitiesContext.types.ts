@@ -1,6 +1,6 @@
 import type { City } from "../../shared/types/City";
 
-export type contextTypeValue = {
+export type ContextTypeValue = {
   isLoading: boolean;
   cities: City[];
   currentCity?: City;
