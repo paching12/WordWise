@@ -5,13 +5,16 @@ import {
   useContext,
   useReducer,
 } from "react";
-import type { City } from "../shared/types/City";
 import type {
   CitiesContextProvider,
   contextTypeValue,
 } from "./CitiesContext.types";
-import { CityReducer, initialState } from "../reducers/cityReducer/cityReducer";
-import { ActionPayloadTypes } from "../actions/cities";
+import { ActionPayloadTypes } from "../../actions/cities";
+import {
+  CityReducer,
+  initialState,
+} from "../../reducers/cityReducer/cityReducer";
+import type { City } from "../../shared/types/City";
 
 const URL = "http://localhost:8001";
 
