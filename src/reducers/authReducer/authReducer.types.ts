@@ -1,5 +1,7 @@
+import type { User } from "@shared/types/User";
+
 export type AuthReducerState = {
-  user?: string;
+  user?: User;
   isAuthenticated: boolean;
 };
 
@@ -13,7 +15,7 @@ export type ActionPayloadAuthTypes =
 
 export type PayloadAuthContent = {
   [AUTH_ACTIONS.LOGIN]: {
-    user: string;
+    user: User;
     password: string;
   };
   [AUTH_ACTIONS.LOGOUT]: undefined;

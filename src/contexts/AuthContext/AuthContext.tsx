@@ -5,12 +5,18 @@ import {
   initialAuthState,
 } from "../../reducers/authReducer/authReducer";
 import { AUTH_ACTIONS } from "../../reducers/authReducer/authReducer.types";
-// import { AUTH_ACTIONS } from "../../reducers/authReducer/authReducer.types";
 
 const AuthContext = createContext<AuthContextState>({
   user: undefined,
   isAuthenticated: false,
 });
+
+const FAKE_USER = {
+  name: "Jack",
+  email: "jack@example.com",
+  password: "qwerty",
+  avatar: "https://i.pravatar.cc/100?u=zz",
+};
 
 const AuthProvider: FC<AuthContextProps> = ({ children }) => {
   const [{ user, isAuthenticated }, dispatch] = useReducer(
@@ -19,13 +25,14 @@ const AuthProvider: FC<AuthContextProps> = ({ children }) => {
   );
 
   const login = (newUser: string, password: string) => {
-    dispatch({
-      type: AUTH_ACTIONS.LOGIN,
-      payload: {
-        user: newUser,
-        password,
-      },
-    });
+    if (newUser === FAKE_USER.email && password === FAKE_USER.password)
+      dispatch({
+        type: AUTH_ACTIONS.LOGIN,
+        payload: {
+          user: FAKE_USER,
+          password,
+        },
+      });
   };
   const logout = () => {};
   return (
@@ -52,4 +59,4 @@ const useAuth = () => {
 };
 
 // eslint-disable-next-line react-refresh/only-export-components
-export { AuthProvider, useAuth };
+export { AuthProvider, useAuth, FAKE_USER };
