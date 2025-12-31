@@ -3,7 +3,7 @@
     {
       "cityName": "Berlin",
       "country": "Germany",
-      "emoji": "🇩🇪",
+      "countryCode": "DE",
       "date": "2027-02-12T09:24:11.863Z",
       "notes": "Amazing 😃",
       "position": {
@@ -13,63 +13,123 @@
       "id": "98443197"
     },
     {
-      "id": "1763524720749",
-      "cityName": "Sant Julia de Loria",
-      "country": "Andorra",
-      "emoji": "🇦🇩",
-      "date": "2025-11-13T00:00:00.000Z",
-      "notes": "Chistorra, Pedorra",
+      "id": "1767153690178",
+      "cityName": "Madrid",
+      "country": "Spain",
+      "countryCode": "ES",
+      "date": "2025-09-30T06:00:00.000Z",
+      "notes": "Santiago Bernabeu is the most wonderful stadium around the world.",
       "position": {
-        "lat": 42.43942444096973,
-        "lng": 1.5292251443779261
+        "lat": 40.3815331013832,
+        "lng": -3.7352871533386365
       }
     },
     {
-      "id": "1764016613318",
-      "cityName": "Metro Vancouver Regional District",
-      "country": "Canada",
-      "emoji": "🇨🇦",
-      "date": "2025-10-28T00:00:00.000Z",
-      "notes": "VaNCOUVER",
+      "id": "1767153797674",
+      "cityName": "Paris",
+      "country": "France",
+      "countryCode": "FR",
+      "date": "2024-03-07T06:00:00.000Z",
+      "notes": "The most romantic atmosphere is here, although there are lots of rats 🐀.",
       "position": {
-        "lat": 49.260303287960234,
-        "lng": -123.11730465271434
+        "lat": 48.84334447782738,
+        "lng": 2.351076041930687
       }
     },
     {
-      "id": "1764017001377",
-      "cityName": "Victoria",
-      "country": "Canada",
-      "emoji": "🇨🇦",
-      "date": "2025-11-02T00:00:00.000Z",
-      "notes": "Victoria",
-      "position": {
-        "lat": 48.427708288582956,
-        "lng": -123.36562398432086
-      }
-    },
-    {
-      "id": "1764017689349",
-      "cityName": "Metro Vancouver Regional District",
-      "country": "Canada",
-      "emoji": "🇨🇦",
-      "date": "2023-04-07T00:00:00.000Z",
-      "notes": "My first foreign travel alone",
-      "position": {
-        "lat": 49.211117632405625,
-        "lng": -122.94434032385256
-      }
-    },
-    {
-      "id": "1766722702929",
+      "id": "1767153836743",
       "cityName": "Mexico City",
       "country": "Mexico",
-      "emoji": "🇲🇽",
-      "date": "2025-12-25T06:00:00.000Z",
-      "notes": "Christmas time",
+      "countryCode": "MX",
+      "date": "2025-12-30T06:00:00.000Z",
+      "notes": "This is a Caos 💥",
       "position": {
-        "lat": 19.419718479500023,
-        "lng": -99.13533517280324
+        "lat": 19.420468135909942,
+        "lng": -99.12414761656056
+      }
+    },
+    {
+      "id": "1767153973908",
+      "cityName": "Los Angeles",
+      "country": "United States of America (the)",
+      "countryCode": "US",
+      "date": "2023-04-05T06:00:00.000Z",
+      "notes": "Only in LA - Foster the people",
+      "position": {
+        "lat": 34.05153676820679,
+        "lng": -118.2403495742652
+      }
+    },
+    {
+      "id": "1767154342771",
+      "cityName": "Portalegre",
+      "country": "Portugal",
+      "countryCode": "PT",
+      "date": "2026-03-12T06:00:00.000Z",
+      "notes": "SIUUUUUU",
+      "position": {
+        "lat": 39.23835635825365,
+        "lng": -7.294611260788269
+      }
+    },
+    {
+      "id": "1767154403102",
+      "cityName": "Pretoria",
+      "country": "South Africa",
+      "countryCode": "ZA",
+      "date": "2010-08-07T05:00:00.000Z",
+      "notes": "WAKA WAKA",
+      "position": {
+        "lat": -25.91718122451892,
+        "lng": 28.234847396287535
+      }
+    },
+    {
+      "id": "1767154439471",
+      "cityName": "Rome",
+      "country": "Italy",
+      "countryCode": "IT",
+      "date": "2030-06-11T06:00:00.000Z",
+      "notes": "COLISEO ROMANO",
+      "position": {
+        "lat": 41.88226427993096,
+        "lng": 12.48050658137024
+      }
+    },
+    {
+      "id": "1767154471785",
+      "cityName": "London",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "countryCode": "GB",
+      "date": "2022-12-04T06:00:00.000Z",
+      "notes": "WOTAH LIKE HARRY POTTAH",
+      "position": {
+        "lat": 51.43028141543352,
+        "lng": -0.08772372905151872
+      }
+    },
+    {
+      "id": "1767154502180",
+      "cityName": "Dublin",
+      "country": "Ireland",
+      "countryCode": "IE",
+      "date": "2021-12-04T06:00:00.000Z",
+      "notes": "Goblins everywhere",
+      "position": {
+        "lat": 53.33203650182257,
+        "lng": -6.240236187796434
+      }
+    },
+    {
+      "id": "1767154542552",
+      "cityName": "Victoria",
+      "country": "Canada",
+      "countryCode": "CA",
+      "date": "2021-12-10T06:00:00.000Z",
+      "notes": "Butchans Garden",
+      "position": {
+        "lat": 48.428343574689215,
+        "lng": -123.36273092965762
       }
     }
   ]
