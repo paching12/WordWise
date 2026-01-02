@@ -1,8 +1,9 @@
 import { useAuth } from "@contexts";
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import type { ProtectedRoutesProps } from "./ProtectedRoutes.types";
 
-const ProtectedRoutes = ({ children }) => {
+const ProtectedRoutes = ({ children }: ProtectedRoutesProps) => {
   const { isAuthenticated } = useAuth();
   const navigate = useNavigate();
 

@@ -131,6 +131,30 @@
         "lat": 48.428343574689215,
         "lng": -123.36273092965762
       }
+    },
+    {
+      "id": "1767155519752",
+      "cityName": "Oslo",
+      "country": "Norway",
+      "countryCode": "NO",
+      "date": "2026-05-08T06:00:00.000Z",
+      "notes": "HALAND!!",
+      "position": {
+        "lat": 59.89260836440411,
+        "lng": 10.722973486407504
+      }
+    },
+    {
+      "id": "1767155547829",
+      "cityName": "Longnan Shi",
+      "country": "China",
+      "countryCode": "CN",
+      "date": "2026-10-16T06:00:00.000Z",
+      "notes": "Chinesse wall",
+      "position": {
+        "lat": 34.327963492939475,
+        "lng": 104.94006068627685
+      }
     }
   ]
 }
