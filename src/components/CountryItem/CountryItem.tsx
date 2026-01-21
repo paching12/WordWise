@@ -1,4 +1,4 @@
-import React, { type FC } from "react";
+import { type FC } from "react";
 import styles from "./CountryItem.module.css";
 import type { CountryItemProps } from "./CountryItem.types";
 
