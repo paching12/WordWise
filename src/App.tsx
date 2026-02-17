@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 
 const Homepage = lazy(() => import("./pages/Homepage/Homepage"));
 const Pricing = lazy(() => import("./pages/Pricing/Pricing"));
@@ -20,7 +20,7 @@ const App = () => {
   return (
     <AuthProvider>
       <CitiesProvider>
-        <BrowserRouter basename={import.meta.env.BASE_URL}>
+        <HashRouter>
           <Suspense fallback={<SpinnerFullPage />}>
             <Routes>
               <Route index element={<Homepage />} />
@@ -45,7 +45,7 @@ const App = () => {
               <Route path="*" element={<PageNotFound />} />
             </Routes>
           </Suspense>
-        </BrowserRouter>
+        </HashRouter>
       </CitiesProvider>
     </AuthProvider>
   );
