@@ -16,8 +16,7 @@ import {
   initialState,
 } from "../../reducers/cityReducer/cityReducer";
 import type { City } from "../../shared/types/City";
-
-const URL = "http://localhost:8001";
+import { citiesAPI } from "../../shared/services/citiesAPI";
 
 const CitiesContext = createContext<ContextTypeValue>({
   createCity: () => {},
@@ -42,14 +41,13 @@ const CitiesProvider: FC<CitiesContextProvider> = ({ children }) => {
       });
 
       try {
-        const res = await fetch(`${URL}/cities`);
-        const data = await res.json();
+        const data = await citiesAPI.fetchCities();
         dispatch({
           type: ActionPayloadTypes.LOADED_CITIES,
           payload: data,
         });
       } catch {
-        alert("There was an error loading data");
+        // alert("There was an error loading data");
         dispatch({
           type: ActionPayloadTypes.REJECTED_CITY,
           payload: "There was an error loading data",
@@ -69,8 +67,7 @@ const CitiesProvider: FC<CitiesContextProvider> = ({ children }) => {
       });
 
       try {
-        const res = await fetch(`${URL}/cities/${id}`);
-        const data = await res.json();
+        const data = await citiesAPI.fetchCity(id);
         dispatch({
           type: ActionPayloadTypes.LOADED_CITY,
           payload: data,
@@ -91,15 +88,7 @@ const CitiesProvider: FC<CitiesContextProvider> = ({ children }) => {
       payload: undefined,
     });
     try {
-      const res = await fetch(`${URL}/cities`, {
-        method: "POST",
-        body: JSON.stringify(newCity),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-      const data: City = await res.json();
+      const data = await citiesAPI.createCity(newCity);
 
       dispatch({
         type: ActionPayloadTypes.CREATE_CITY,
@@ -121,12 +110,7 @@ const CitiesProvider: FC<CitiesContextProvider> = ({ children }) => {
     });
 
     try {
-      const res = await fetch(`${URL}/cities/${id}`, {
-        method: "DELETE",
-      });
-
-      const data: City = await res.json();
-      console.log("post data", data);
+      await citiesAPI.deleteCity(id);
 
       dispatch({
         type: ActionPayloadTypes.DELETE_CITY,
