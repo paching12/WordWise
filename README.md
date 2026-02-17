@@ -2,6 +2,8 @@
 
 A modern web application for travelers to track and visualize the countries they've visited. Mark your travels on an interactive world map, keep notes about your visits, and explore the stories of your travels all in one place.
 
+**Live Demo:** [https://paching12.github.io/worldwise/](https://paching12.github.io/worldwise/)
+
 ## Features
 
 - 📍 Interactive world map to mark visited countries
@@ -26,7 +28,7 @@ This project is configured to automatically deploy to GitHub Pages when you push
 
 - A GitHub Actions workflow automatically builds and deploys your project on every push to `main`
 - The workflow runs `npm run build` and deploys the `dist` folder to the `gh-pages` branch
-- Your site will be available at: `https://<your-github-username>.github.io/worldwise/`
+- Your site is live at: [https://paching12.github.io/worldwise/](https://paching12.github.io/worldwise/)
 
 ### Manual Deployment
 
